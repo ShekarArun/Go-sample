@@ -35,7 +35,7 @@ func (r RegisterController) Create(rw http.ResponseWriter, req *http.Request) {
 		panic(err)
 	}
 
-	insert_query := "INSERT INTO users (id, name) VALUES ($1, $2)"
+	insert_query, err := "INSERT INTO users (id, name) VALUES ($1, $2)"
 	if err != nil {
 		panic(err)
 	}
