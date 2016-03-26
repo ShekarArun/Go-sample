@@ -14,6 +14,6 @@ func main() {
 	r.HandleFunc("/delete/{id:[0-9]+}",controllers.Register.Delete).Methods("DELETE")
 	r.HandleFunc("/fetch_all",controllers.Register.FetchAll).Methods("GET")
 	http.Handle("/", r)
-	log.Println("main: Bombs Away on Port 3000 !")
+	log.Println("main: Server started on Port 3000 !")
 	log.Fatal(http.ListenAndServe("0.0.0.0:3000", nil))
 }
